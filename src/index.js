@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import JimHarbargh from './containers/ReduxStudents'
 
 // Go get the createStore method from the redux module
 import { createStore } from 'redux';
@@ -10,14 +10,16 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
 // import the rootReducer so we can give it to the store... fill those shelves!!
-import reducers from './reducers/rootReducer'
+import RootReducer from './reducers/rootReducer'
 
-const theStore = createStore(reducers);
+const theStore = createStore(RootReducer);
+console.log(theStore)
 
 // ReactDOM.render takes 2 args... 1. What, 2. Where
 ReactDOM.render(
 	<Provider store={theStore}>
-		<App />
+		<JimHarbargh />
 	</Provider>, 
 	document.getElementById('root')
 );
+

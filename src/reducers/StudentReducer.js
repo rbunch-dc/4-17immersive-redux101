@@ -1,3 +1,12 @@
 export default function(){
-	return []
+	return [
+		'Chad',
+		'Shane',
+		'Ian',
+		'Drew',
+		'Guido',
+		'Porscha',
+		'Carla',
+		'YingRong'
+	]
 }
