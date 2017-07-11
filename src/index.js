@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// if importing the default, you can call it whatever you want...
 import JimHarbargh from './containers/ReduxStudents'
 
 // Go get the createStore method from the redux module
