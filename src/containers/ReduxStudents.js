@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 // the react-redux module. The glue.
 import { connect } from 'react-redux';
 // Get our actions...
-import SelectStudent from '../actions/SelectStudent';
+import SelectStudent from '../actions/SelectStudentAction';
 // console.log(SelectStudent);
 
 // bindActionCreators is a redux function that we will tap into to
@@ -22,8 +22,11 @@ class ReduxStudents extends Component{
 		var studentArray = [];
 		this.props.students.map((student,index)=>{
 			studentArray.push(
-				<li key={index}>
-					{student}
+				<li 
+					key={index} 
+					onClick={()=> {this.props.selectStudent(student)}}
+				>
+						{student}
 				</li>
 			)
 		})
@@ -31,6 +34,8 @@ class ReduxStudents extends Component{
 			<div>
 				<h1>This is ReduxStudents</h1>
 				{studentArray}
+				<hr />
+				{this.props.selectedStudent} is selected.
 			</div>
 		)
 	}
@@ -61,7 +66,8 @@ function mapStateToProps(state){
 		// From our master Reducer, we have a "state" object
 		// INside of that state object, we have a property: students
 		// This exists because we made it a property in the root reducer
-		students: state.students
+		students: state.students,
+		selectedStudent: state.selectedStudent
 	}
 }
 
