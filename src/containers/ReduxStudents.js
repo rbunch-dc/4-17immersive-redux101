@@ -20,9 +20,9 @@ class ReduxStudents extends Component{
 	}
 
 	componentDidMount() {
-		setInterval(()=>{
-			this.props.timerAction();
-		},1000)
+		// setInterval(()=>{
+		// 	this.props.timerAction();
+		// },10000)
 	}
 
 	render(){
@@ -45,7 +45,7 @@ class ReduxStudents extends Component{
 				<hr />
 				{this.props.selectedStudent} is selected.
 				<hr />
-				{this.props.timer} is the apps current time.
+				{/* {this.props.timer} is the apps current time. */ }
 			</div>
 		)
 	}

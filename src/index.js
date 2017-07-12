@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// if importing the default, you can call it whatever you want...
-import JimHarbargh from './containers/ReduxStudents'
+import App from './App'
 
 // Go get the createStore method from the redux module
 import { createStore } from 'redux';
@@ -19,7 +18,9 @@ console.log(theStore)
 // ReactDOM.render takes 2 args... 1. What, 2. Where
 ReactDOM.render(
 	<Provider store={theStore}>
-		<JimHarbargh />
+		<div className="app">
+			<App />
+		</div>
 	</Provider>, 
 	document.getElementById('root')
 );
